@@ -143,3 +143,13 @@ checkBoxPolicy.addEventListener('blur', function() {
     
     this.closest('label').classList.remove('hovered');
 });
+
+mask('#tel');
+const submitForm = document.querySelector('#submitForm');
+const telInput = document.querySelector('#tel');
+
+submitForm.onclick = function() {
+    if (telInput.value === '+' || telInput.value.length < 6) {
+        telInput.value = '';
+    }
+};
